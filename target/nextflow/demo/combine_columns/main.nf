@@ -38,6 +38,14 @@ thisFunctionality = [
       'direction': 'output',
       'default': '$id.$key.output',
       'multiple': false
+    ],
+    [
+      'name': 'id',
+      'required': false,
+      'type': 'string',
+      'direction': 'input',
+      'default': 'combine_columns',
+      'multiple': false
     ]
   ]
 ]
@@ -49,7 +57,11 @@ Options:
         type: file, required parameter, multiple values allowed
 
     --output
-        type: file, required parameter, output'''
+        type: file, required parameter, output
+
+    --id
+        type: string
+        default: combine_columns'''
 
 thisScript = '''set -e
 tempscript=".viash_script.sh"
@@ -63,7 +75,8 @@ viash_orig_warn_ <- options(warn = 2)
 # get parameters from cli
 par <- list(
   "input" = $( if [ ! -z ${VIASH_PAR_INPUT+x} ]; then echo "strsplit('${VIASH_PAR_INPUT//\\'/\\\\\\'}', split = ':')[[1]]"; else echo NULL; fi ),
-  "output" = $( if [ ! -z ${VIASH_PAR_OUTPUT+x} ]; then echo "'${VIASH_PAR_OUTPUT//\\'/\\\\\\'}'"; else echo NULL; fi )
+  "output" = $( if [ ! -z ${VIASH_PAR_OUTPUT+x} ]; then echo "'${VIASH_PAR_OUTPUT//\\'/\\\\\\'}'"; else echo NULL; fi ),
+  "id" = $( if [ ! -z ${VIASH_PAR_ID+x} ]; then echo "'${VIASH_PAR_ID//\\'/\\\\\\'}'"; else echo NULL; fi )
 )
 
 # get meta parameters

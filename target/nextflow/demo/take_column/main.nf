@@ -45,6 +45,14 @@ thisFunctionality = [
       'direction': 'input',
       'default': 2,
       'multiple': false
+    ],
+    [
+      'name': 'id',
+      'required': false,
+      'type': 'string',
+      'direction': 'input',
+      'default': 'take_column',
+      'multiple': false
     ]
   ]
 ]
@@ -60,7 +68,11 @@ Options:
 
     --column
         type: integer
-        default: 2'''
+        default: 2
+
+    --id
+        type: string
+        default: take_column'''
 
 thisScript = '''set -e
 tempscript=".viash_script.sh"
@@ -72,7 +84,8 @@ import pandas as pd
 par = {
   'input': $( if [ ! -z ${VIASH_PAR_INPUT+x} ]; then echo "'${VIASH_PAR_INPUT//\\'/\\\\\\'}'"; else echo None; fi ),
   'output': $( if [ ! -z ${VIASH_PAR_OUTPUT+x} ]; then echo "'${VIASH_PAR_OUTPUT//\\'/\\\\\\'}'"; else echo None; fi ),
-  'column': $( if [ ! -z ${VIASH_PAR_COLUMN+x} ]; then echo "int('${VIASH_PAR_COLUMN//\\'/\\\\\\'}')"; else echo None; fi )
+  'column': $( if [ ! -z ${VIASH_PAR_COLUMN+x} ]; then echo "int('${VIASH_PAR_COLUMN//\\'/\\\\\\'}')"; else echo None; fi ),
+  'id': $( if [ ! -z ${VIASH_PAR_ID+x} ]; then echo "'${VIASH_PAR_ID//\\'/\\\\\\'}'"; else echo None; fi )
 }
 meta = {
   'functionality_name': '$VIASH_META_FUNCTIONALITY_NAME',

@@ -161,6 +161,10 @@ function ViashHelp {
   echo "    --column"
   echo "        type: integer"
   echo "        default: 2"
+  echo ""
+  echo "    --id"
+  echo "        type: string"
+  echo "        default: take_column"
 }
 ######## Helper functions for setting up Docker images for viash ########
 # expects: ViashDockerBuild
@@ -546,6 +550,15 @@ while [[ $# -gt 0 ]]; do
             VIASH_PAR_COLUMN=$(ViashRemoveFlags "$1")
             shift 1
             ;;
+        --id)
+            VIASH_PAR_ID="$2"
+            [ $# -lt 2 ] && ViashError Not enough arguments passed to --id. Use "--help" to get more information on the parameters. && exit 1
+            shift 2
+            ;;
+        --id=*)
+            VIASH_PAR_ID=$(ViashRemoveFlags "$1")
+            shift 1
+            ;;
         ---setup)
             VIASH_MODE='docker_setup'
             VIASH_DOCKER_SETUP_STRATEGY="$2"
@@ -611,6 +624,9 @@ fi
 if [ -z "$VIASH_PAR_COLUMN" ]; then
   VIASH_PAR_COLUMN="2"
 fi
+if [ -z "$VIASH_PAR_ID" ]; then
+  VIASH_PAR_ID="take_column"
+fi
 
 
 # check whether parameters values are of the right type
@@ -624,7 +640,9 @@ if [[ -n "$VIASH_PAR_COLUMN" ]]; then
 fi
 
 
+
 # check whether parameters values are of the right type
+
 
 
 
@@ -676,7 +694,8 @@ import pandas as pd
 par = {
   'input': $( if [ ! -z ${VIASH_PAR_INPUT+x} ]; then echo "'${VIASH_PAR_INPUT//\'/\\\'}'"; else echo None; fi ),
   'output': $( if [ ! -z ${VIASH_PAR_OUTPUT+x} ]; then echo "'${VIASH_PAR_OUTPUT//\'/\\\'}'"; else echo None; fi ),
-  'column': $( if [ ! -z ${VIASH_PAR_COLUMN+x} ]; then echo "int('${VIASH_PAR_COLUMN//\'/\\\'}')"; else echo None; fi )
+  'column': $( if [ ! -z ${VIASH_PAR_COLUMN+x} ]; then echo "int('${VIASH_PAR_COLUMN//\'/\\\'}')"; else echo None; fi ),
+  'id': $( if [ ! -z ${VIASH_PAR_ID+x} ]; then echo "'${VIASH_PAR_ID//\'/\\\'}'"; else echo None; fi )
 }
 meta = {
   'functionality_name': '$VIASH_META_FUNCTIONALITY_NAME',

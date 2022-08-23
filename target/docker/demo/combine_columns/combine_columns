@@ -157,6 +157,10 @@ function ViashHelp {
   echo ""
   echo "    -o, --output"
   echo "        type: file, required parameter, output"
+  echo ""
+  echo "    --id"
+  echo "        type: string"
+  echo "        default: combine_columns"
 }
 ######## Helper functions for setting up Docker images for viash ########
 # expects: ViashDockerBuild
@@ -543,6 +547,15 @@ while [[ $# -gt 0 ]]; do
             [ $# -lt 2 ] && ViashError Not enough arguments passed to -o. Use "--help" to get more information on the parameters. && exit 1
             shift 2
             ;;
+        --id)
+            VIASH_PAR_ID="$2"
+            [ $# -lt 2 ] && ViashError Not enough arguments passed to --id. Use "--help" to get more information on the parameters. && exit 1
+            shift 2
+            ;;
+        --id=*)
+            VIASH_PAR_ID=$(ViashRemoveFlags "$1")
+            shift 1
+            ;;
         ---setup)
             VIASH_MODE='docker_setup'
             VIASH_DOCKER_SETUP_STRATEGY="$2"
@@ -605,14 +618,18 @@ if [ -z "$VIASH_PAR_OUTPUT" ]; then
   ViashError '--output' is a required argument. Use "--help" to get more information on the parameters.
   exit 1
 fi
-
+if [ -z "$VIASH_PAR_ID" ]; then
+  VIASH_PAR_ID="combine_columns"
+fi
 
 
 # check whether parameters values are of the right type
 
 
 
+
 # check whether parameters values are of the right type
+
 
 
 
@@ -674,7 +691,8 @@ viash_orig_warn_ <- options(warn = 2)
 # get parameters from cli
 par <- list(
   "input" = $( if [ ! -z ${VIASH_PAR_INPUT+x} ]; then echo "strsplit('${VIASH_PAR_INPUT//\'/\\\'}', split = ':')[[1]]"; else echo NULL; fi ),
-  "output" = $( if [ ! -z ${VIASH_PAR_OUTPUT+x} ]; then echo "'${VIASH_PAR_OUTPUT//\'/\\\'}'"; else echo NULL; fi )
+  "output" = $( if [ ! -z ${VIASH_PAR_OUTPUT+x} ]; then echo "'${VIASH_PAR_OUTPUT//\'/\\\'}'"; else echo NULL; fi ),
+  "id" = $( if [ ! -z ${VIASH_PAR_ID+x} ]; then echo "'${VIASH_PAR_ID//\'/\\\'}'"; else echo NULL; fi )
 )
 
 # get meta parameters

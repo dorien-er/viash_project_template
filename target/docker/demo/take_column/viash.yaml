@@ -39,6 +39,17 @@ functionality:
     direction: "input"
     multiple: false
     multiple_sep: ":"
+  - type: "string"
+    name: "--id"
+    alternatives: []
+    example: []
+    default:
+    - "take_column"
+    required: false
+    choices: []
+    direction: "input"
+    multiple: false
+    multiple_sep: ":"
   resources:
   - type: "bash_script"
     text: |
@@ -205,6 +216,10 @@ functionality:
         echo "    --column"
         echo "        type: integer"
         echo "        default: 2"
+        echo ""
+        echo "    --id"
+        echo "        type: string"
+        echo "        default: take_column"
       }
       ######## Helper functions for setting up Docker images for viash ########
       # expects: ViashDockerBuild
@@ -590,6 +605,15 @@ functionality:
                   VIASH_PAR_COLUMN=$(ViashRemoveFlags "$1")
                   shift 1
                   ;;
+              --id)
+                  VIASH_PAR_ID="$2"
+                  [ $# -lt 2 ] && ViashError Not enough arguments passed to --id. Use "--help" to get more information on the parameters. && exit 1
+                  shift 2
+                  ;;
+              --id=*)
+                  VIASH_PAR_ID=$(ViashRemoveFlags "$1")
+                  shift 1
+                  ;;
               ---setup)
                   VIASH_MODE='docker_setup'
                   VIASH_DOCKER_SETUP_STRATEGY="$2"
@@ -655,6 +679,9 @@ functionality:
       if [ -z "$VIASH_PAR_COLUMN" ]; then
         VIASH_PAR_COLUMN="2"
       fi
+      if [ -z "$VIASH_PAR_ID" ]; then
+        VIASH_PAR_ID="take_column"
+      fi
       
       
       # check whether parameters values are of the right type
@@ -668,7 +695,9 @@ functionality:
       fi
       
       
+      
       # check whether parameters values are of the right type
+      
       
       
       
@@ -720,7 +749,8 @@ functionality:
       par = {
         'input': $( if [ ! -z ${VIASH_PAR_INPUT+x} ]; then echo "'${VIASH_PAR_INPUT//\'/\\\'}'"; else echo None; fi ),
         'output': $( if [ ! -z ${VIASH_PAR_OUTPUT+x} ]; then echo "'${VIASH_PAR_OUTPUT//\'/\\\'}'"; else echo None; fi ),
-        'column': $( if [ ! -z ${VIASH_PAR_COLUMN+x} ]; then echo "int('${VIASH_PAR_COLUMN//\'/\\\'}')"; else echo None; fi )
+        'column': $( if [ ! -z ${VIASH_PAR_COLUMN+x} ]; then echo "int('${VIASH_PAR_COLUMN//\'/\\\'}')"; else echo None; fi ),
+        'id': $( if [ ! -z ${VIASH_PAR_ID+x} ]; then echo "'${VIASH_PAR_ID//\'/\\\'}'"; else echo None; fi )
       }
       meta = {
         'functionality_name': '$VIASH_META_FUNCTIONALITY_NAME',
@@ -790,5 +820,5 @@ info:
   output: "target/docker/demo/take_column"
   executable: "target/docker/demo/take_column/take_column"
   viash_version: "0.5.12"
-  git_commit: "d1bc8573572d9f6d215081cd1f6dd001e9cdedcc"
+  git_commit: "6dabbc88b9e15177a2e79f5d3352839091f45f7c"
   git_remote: "https://github.com/viash-io/viash_project_template"
