@@ -369,9 +369,9 @@ FROM rocker/r-ver:4.1
 
 RUN :
 LABEL org.opencontainers.image.description="Companion container for running component demo combine_columns"
-LABEL org.opencontainers.image.created="2022-08-23T13:04:21Z"
+LABEL org.opencontainers.image.created="2022-08-24T15:15:56Z"
 LABEL org.opencontainers.image.source="https://github.com/viash-io/viash_project_template"
-LABEL org.opencontainers.image.revision="319765fc3456df58684de6cbbe4066dab23526c7"
+LABEL org.opencontainers.image.revision="ae7e17a3f6f7b0853790f7a1078ee3ce61bb77ad"
 LABEL org.opencontainers.image.version="main_build"
 VIASHDOCKER
 }
