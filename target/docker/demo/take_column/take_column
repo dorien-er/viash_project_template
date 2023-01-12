@@ -394,9 +394,9 @@ RUN pip install --upgrade pip && \
   pip install --upgrade --no-cache-dir "pandas"
 
 LABEL org.opencontainers.image.description="Companion container for running component demo take_column"
-LABEL org.opencontainers.image.created="2023-01-12T10:48:55Z"
+LABEL org.opencontainers.image.created="2023-01-12T10:57:48Z"
 LABEL org.opencontainers.image.source="https://github.com/viash-io/viash_project_template"
-LABEL org.opencontainers.image.revision="5db360785bfafebdd99838d10bf2368a61f918be"
+LABEL org.opencontainers.image.revision="847d5a1884d340cd17d1b3d6509ed78920c91333"
 LABEL org.opencontainers.image.version="main_build"
 VIASHDOCKER
 }

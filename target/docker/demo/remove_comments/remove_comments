@@ -390,9 +390,9 @@ FROM ubuntu:20.04
 
 RUN :
 LABEL org.opencontainers.image.description="Companion container for running component demo remove_comments"
-LABEL org.opencontainers.image.created="2023-01-12T10:48:54Z"
+LABEL org.opencontainers.image.created="2023-01-12T10:57:47Z"
 LABEL org.opencontainers.image.source="https://github.com/viash-io/viash_project_template"
-LABEL org.opencontainers.image.revision="5db360785bfafebdd99838d10bf2368a61f918be"
+LABEL org.opencontainers.image.revision="847d5a1884d340cd17d1b3d6509ed78920c91333"
 LABEL org.opencontainers.image.version="main_build"
 VIASHDOCKER
 }
