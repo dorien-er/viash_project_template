@@ -3,8 +3,6 @@ functionality:
   namespace: "demo"
   version: "main_build"
   authors: []
-  inputs: []
-  outputs: []
   arguments:
   - type: "file"
     name: "--input"
@@ -69,10 +67,10 @@ functionality:
 platforms:
 - type: "docker"
   id: "docker"
-  image: "python:3.10"
+  image: "python:3.10-slim"
   target_organization: "viash-io/viash_project_template"
   target_registry: "ghcr.io"
-  namespace_separator: "_"
+  namespace_separator: "/"
   resolve_volume: "Automatic"
   chown: true
   port: []
@@ -121,6 +119,6 @@ info:
   platform: "docker"
   output: "/home/runner/work/viash_project_template/viash_project_template/target/docker/demo/take_column"
   executable: "/home/runner/work/viash_project_template/viash_project_template/target/docker/demo/take_column/take_column"
-  viash_version: "0.6.7"
-  git_commit: "847d5a1884d340cd17d1b3d6509ed78920c91333"
+  viash_version: "0.7.1"
+  git_commit: "3a7bb3e6fa2d531b50413d9842b4c2fc8747da4e"
   git_remote: "https://github.com/viash-io/viash_project_template"
