@@ -126,7 +126,7 @@ thisConfig = processConfig(jsonSlurper.parseText('''{
     "config" : "/home/runner/work/viash_project_template/viash_project_template/src/demo/remove_comments/config.vsh.yaml",
     "platform" : "nextflow",
     "viash_version" : "0.7.1",
-    "git_commit" : "3a7bb3e6fa2d531b50413d9842b4c2fc8747da4e",
+    "git_commit" : "1f550b941557875c484f8594e7e1550661106f01",
     "git_remote" : "https://github.com/viash-io/viash_project_template"
   }
 }'''))

@@ -390,9 +390,9 @@ FROM bash:4.0
 
 RUN :
 LABEL org.opencontainers.image.description="Companion container for running component demo remove_comments"
-LABEL org.opencontainers.image.created="2023-03-17T08:19:32Z"
+LABEL org.opencontainers.image.created="2023-03-17T08:26:31Z"
 LABEL org.opencontainers.image.source="https://github.com/viash-io/viash_project_template"
-LABEL org.opencontainers.image.revision="3a7bb3e6fa2d531b50413d9842b4c2fc8747da4e"
+LABEL org.opencontainers.image.revision="1f550b941557875c484f8594e7e1550661106f01"
 LABEL org.opencontainers.image.version="main_build"
 VIASHDOCKER
 }
