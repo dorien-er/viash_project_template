@@ -386,13 +386,13 @@ function ViashDockerCheckCommands {
 #   ViashDockerFile
 function ViashDockerfile {
   cat << 'VIASHDOCKER'
-FROM bash:4.0
+FROM ubuntu:20.04
 
 RUN :
 LABEL org.opencontainers.image.description="Companion container for running component demo remove_comments"
-LABEL org.opencontainers.image.created="2023-03-17T08:26:31Z"
+LABEL org.opencontainers.image.created="2023-05-04T12:17:54Z"
 LABEL org.opencontainers.image.source="https://github.com/viash-io/viash_project_template"
-LABEL org.opencontainers.image.revision="1f550b941557875c484f8594e7e1550661106f01"
+LABEL org.opencontainers.image.revision="ffa7b1bee3fb192bec568a772b44c6b527cd941b"
 LABEL org.opencontainers.image.version="main_build"
 VIASHDOCKER
 }

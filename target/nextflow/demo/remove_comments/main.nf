@@ -96,7 +96,7 @@ thisConfig = processConfig(jsonSlurper.parseText('''{
     {
       "type" : "docker",
       "id" : "docker",
-      "image" : "bash:4.0",
+      "image" : "ubuntu:20.04",
       "target_organization" : "viash-io/viash_project_template",
       "target_registry" : "ghcr.io",
       "namespace_separator" : "/",
@@ -126,7 +126,7 @@ thisConfig = processConfig(jsonSlurper.parseText('''{
     "config" : "/home/runner/work/viash_project_template/viash_project_template/src/demo/remove_comments/config.vsh.yaml",
     "platform" : "nextflow",
     "viash_version" : "0.7.1",
-    "git_commit" : "1f550b941557875c484f8594e7e1550661106f01",
+    "git_commit" : "ffa7b1bee3fb192bec568a772b44c6b527cd941b",
     "git_remote" : "https://github.com/viash-io/viash_project_template"
   }
 }'''))
