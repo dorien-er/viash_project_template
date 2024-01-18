@@ -29,7 +29,7 @@
                     "default": ""
                 },
                 "column": {
-                    "type": "integer",
+                    "type": "string",
                     "description": "The column index to extract from the TSV input file.",
                     "default": ""
                 },
