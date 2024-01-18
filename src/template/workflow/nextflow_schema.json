@@ -21,7 +21,7 @@
         "manual inputs": {
             "title": "Manual input",
             "type": "object",
-            "description": "Optional: input of global parameters, overrides parameters present in the param_list.",
+            "description": "Optional: input of global parameters applicable to all events in the Nextflow channel. If the parameter is also present in the param_list, param_list variable will overwrite manual input of global parameters.",
             "properties": {
                 "input": {
                     "type": "string",
