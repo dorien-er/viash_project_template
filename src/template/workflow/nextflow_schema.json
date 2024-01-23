@@ -1,16 +1,16 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "title": "viash_project_template",
-    "description": "Viash Project Template.",
+    "title": "workflow",
+    "description": "An example pipeline and project template.\n\nMultiple TSV files can be input, each with a 'column' identifier that\nshould be extracted. All extracted columns are then collated again.\n",
     "type": "object",
     "definitions": {
-        "inputs": {
-            "title": "Sample sheet input",
+        "Dataset input": {
+            "title": "Dataset input",
             "type": "object",
-            "description": "Allows inputting multiple parameter sets to initialise a Nextflow channel.",
+            "description": "Dataset input using nf-tower \"dataset\" or \"data explorer\". Allows for the input of multiple parameter sets to initialise a Nextflow channel.",
             "properties": {
                 "param_list": {
-                    "description": "Input can either be a list of maps, a csv file, a json file, a yaml file, or simply a yaml blob.",
+                    "description": "Dataset input can either be a list of maps, a csv file, a json file, a yaml file, or simply a yaml blob.",
                     "default": "",
                     "format": "file-path",
                     "mimetype": "text/csv",
@@ -18,47 +18,46 @@
                 }
             }
         },
-        "manual inputs": {
-            "title": "Manual input",
+        "arguments": {
+            "title": "Arguments",
             "type": "object",
-            "description": "Optional: input of global parameters applicable to all events in the Nextflow channel. If the parameter is also present in the param_list, param_list variable will overwrite manual input of global parameters.",
+            "description": "No description",
             "properties": {
                 "input": {
                     "type": "string",
-                    "description": "Input TSV file.",
-                    "default": ""
+                    "description": "Type: `file`, required, example: `file1.tar.gz`. Input TSV file",
+                    "help_text": "Type: `file`, required, example: `file1.tar.gz`. Input TSV file"
                 },
                 "column": {
-                    "type": "string",
-                    "description": "The column index to extract from the TSV input file.",
-                    "default": ""
+                    "type": "integer",
+                    "description": "Type: `integer`, default: `2`. The column index to extract from the TSV input file",
+                    "help_text": "Type: `integer`, default: `2`. The column index to extract from the TSV input file",
+                    "default": "2"
                 },
                 "output": {
                     "type": "string",
-                    "description": "Output TSV file.",
-                    "default": ""
+                    "description": "Type: `file`, required, default: `$id.$key.output.tsv`, example: `output.tsv`. Output TSV file",
+                    "help_text": "Type: `file`, required, default: `$id.$key.output.tsv`, example: `output.tsv`. Output TSV file",
+                    "default": "$id.$key.output.tsv"
                 }
             }
         },
         "nextflow input-output arguments": {
-            "title": "Nextflow input",
+            "title": "Nextflow input-output arguments",
             "type": "object",
-            "description": "Input/output parameters for Nextflow itself.",
+            "description": "Input/output parameters for Nextflow itself. Please note that both publishDir and publish_dir are supported but at least one has to be configured.",
             "properties": {
                 "publish_dir": {
                     "type": "string",
-                    "description": "Path to an output directory.",
-                    "default": ""
+                    "description": "Type: `string`, required, example: `output/`. Path to an output directory",
+                    "help_text": "Type: `string`, required, example: `output/`. Path to an output directory."
                 }
             }
         }
     },
     "allOf": [
         {
-            "$ref": "#/definitions/inputs"
-        },
-        {
-            "$ref": "#/definitions/manual inputs"
+            "$ref": "#/definitions/arguments"
         },
         {
             "$ref": "#/definitions/nextflow input-output arguments"
