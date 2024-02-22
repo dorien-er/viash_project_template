@@ -2813,7 +2813,7 @@ meta = [
         "type" : "bash_script",
         "path" : "script.sh",
         "is_executable" : true,
-        "parent" : "file:/Users/toni/code/projects/viash/viash_project_template/src/template/remove_comments/"
+        "parent" : "file:/Users/dorienroosen/code/viash_project_template/src/template/remove_comments/"
       }
     ],
     "test_resources" : [
@@ -2821,7 +2821,7 @@ meta = [
         "type" : "bash_script",
         "path" : "test.sh",
         "is_executable" : true,
-        "parent" : "file:/Users/toni/code/projects/viash/viash_project_template/src/template/remove_comments/"
+        "parent" : "file:/Users/dorienroosen/code/viash_project_template/src/template/remove_comments/"
       }
     ],
     "status" : "enabled",
@@ -2844,6 +2844,9 @@ meta = [
       "type" : "nextflow",
       "id" : "nextflow",
       "directives" : {
+        "label" : [
+          "gpu"
+        ],
         "tag" : "$id"
       },
       "auto" : {
@@ -2891,13 +2894,13 @@ meta = [
     }
   ],
   "info" : {
-    "config" : "/Users/toni/code/projects/viash/viash_project_template/src/template/remove_comments/config.vsh.yaml",
+    "config" : "/Users/dorienroosen/code/viash_project_template/src/template/remove_comments/config.vsh.yaml",
     "platform" : "nextflow",
-    "output" : "/Users/toni/code/projects/viash/viash_project_template/target/nextflow/template/remove_comments",
+    "output" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/remove_comments",
     "viash_version" : "0.8.4",
-    "git_commit" : "11b6278597bf22afbfb56a8e83065a55553c9dd0",
-    "git_remote" : "https://github.com/viash-io/viash_project_template",
-    "git_tag" : "v0.2.1"
+    "git_commit" : "416c8f382ac435c736f594767795282f2b4b16bc",
+    "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
+    "git_tag" : "v0.2.2-1-g416c8f3"
   }
 }'''))
 ]
@@ -3283,6 +3286,9 @@ meta["defaults"] = [
     "image" : "viash-io/viash_project_template/template/remove_comments",
     "tag" : "0.2.2"
   },
+  "label" : [
+    "gpu"
+  ],
   "tag" : "$id"
 }'''),
 

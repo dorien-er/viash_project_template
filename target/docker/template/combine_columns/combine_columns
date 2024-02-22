@@ -402,9 +402,9 @@ ENTRYPOINT []
  
 RUN :
 LABEL org.opencontainers.image.description="Companion container for running component template combine_columns"
-LABEL org.opencontainers.image.created="2024-01-16T14:48:43+01:00"
+LABEL org.opencontainers.image.created="2024-02-22T09:58:59+01:00"
 LABEL org.opencontainers.image.source="https://github.com/viash-io/viash_project_template"
-LABEL org.opencontainers.image.revision="11b6278597bf22afbfb56a8e83065a55553c9dd0"
+LABEL org.opencontainers.image.revision="416c8f382ac435c736f594767795282f2b4b16bc"
 LABEL org.opencontainers.image.version="0.2.2"
 
 VIASHDOCKER

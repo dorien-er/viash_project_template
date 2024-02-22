@@ -19,3 +19,5 @@ platforms:
   - type: docker
     image: eddelbuettel/r2u:22.04
   - type: nextflow
+    directives:
+      label: [gpu]

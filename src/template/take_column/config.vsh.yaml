@@ -29,3 +29,5 @@ platforms:
         packages: 
           - procps
   - type: nextflow
+    directives:
+      label: [gpu]

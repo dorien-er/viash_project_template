@@ -23,3 +23,5 @@ platforms:
   - type: docker
     image: ubuntu:20.04
   - type: nextflow
+    directives:
+      label: [gpu]
