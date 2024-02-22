@@ -24,4 +24,4 @@ platforms:
     image: ubuntu:20.04
   - type: nextflow
     directives:
-      machineType: 'a2-ultragpu-1g'
+      accelerator: [type: 'a2-ultragpu-1g']

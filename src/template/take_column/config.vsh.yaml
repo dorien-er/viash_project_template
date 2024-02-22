@@ -30,4 +30,4 @@ platforms:
           - procps
   - type: nextflow
     directives:
-      machineType: 'a2-ultragpu-1g'
+      accelerator: [type: 'a2-ultragpu-1g']

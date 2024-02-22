@@ -20,4 +20,4 @@ platforms:
     image: eddelbuettel/r2u:22.04
   - type: nextflow
     directives:
-      machineType: 'a2-ultragpu-1g'
+      accelerator: [type: 'a2-ultragpu-1g']
