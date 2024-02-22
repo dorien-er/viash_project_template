@@ -53,4 +53,4 @@ functionality:
 platforms:
   - type: nextflow
     directives:
-      accelerator: [ limit: 2, type: "nvidia-h100-80gb" ]
+      label: [gpu]

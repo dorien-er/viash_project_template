@@ -2859,7 +2859,9 @@ meta = [
       "type" : "nextflow",
       "id" : "nextflow",
       "directives" : {
-        "machineType" : "a2-ultragpu-1g",
+        "label" : [
+          "gpu"
+        ],
         "tag" : "$id"
       },
       "auto" : {
@@ -2911,9 +2913,9 @@ meta = [
     "platform" : "nextflow",
     "output" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/take_column",
     "viash_version" : "0.8.4",
-    "git_commit" : "2bb845dba118b5aa47847f7c4e31749f7a18a9d7",
+    "git_commit" : "63dc92d0f630b777c7d36c0b7d38f0572e4e6d77",
     "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
-    "git_tag" : "v0.2.2-3-g2bb845d"
+    "git_tag" : "v0.2.2-7-g63dc92d"
   }
 }'''))
 ]
@@ -3315,7 +3317,9 @@ meta["defaults"] = [
     "image" : "viash-io/viash_project_template/template/take_column",
     "tag" : "0.2.2"
   },
-  "machineType" : "a2-ultragpu-1g",
+  "label" : [
+    "gpu"
+  ],
   "tag" : "$id"
 }'''),
 
