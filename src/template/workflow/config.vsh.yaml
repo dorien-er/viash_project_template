@@ -53,4 +53,6 @@ functionality:
 platforms:
   - type: nextflow
     directives:
-      label: [gpu]
+      executor: 'google-batch'
+      containerOptions: '--gpus all'
+      machineType: 'a2-ultragpu-1g'

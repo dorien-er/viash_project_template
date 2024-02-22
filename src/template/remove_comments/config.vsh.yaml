@@ -24,4 +24,6 @@ platforms:
     image: ubuntu:20.04
   - type: nextflow
     directives:
-      label: [gpu]
+      executor: 'google-batch'
+      containerOptions: '--gpus all'
+      machineType: 'a2-ultragpu-1g'
