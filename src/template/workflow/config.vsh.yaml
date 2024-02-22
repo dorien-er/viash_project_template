@@ -52,3 +52,5 @@ functionality:
 
 platforms:
   - type: nextflow
+    directives:
+      label: [gpu]

@@ -2828,7 +2828,7 @@ meta = [
         "type" : "nextflow_script",
         "path" : "main.nf",
         "is_executable" : true,
-        "parent" : "file:/Users/toni/code/projects/viash/viash_project_template/src/template/workflow/",
+        "parent" : "file:/Users/dorienroosen/code/viash_project_template/src/template/workflow/",
         "entrypoint" : "run_wf"
       }
     ],
@@ -2841,20 +2841,20 @@ meta = [
           "type" : "local",
           "localPath" : ""
         },
-        "foundConfigPath" : "/Users/toni/code/projects/viash/viash_project_template/src/template/combine_columns/config.vsh.yaml",
+        "foundConfigPath" : "/Users/dorienroosen/code/viash_project_template/src/template/combine_columns/config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "combine_columns",
-          "git_tag" : "v0.2.1",
-          "git_remote" : "https://github.com/viash-io/viash_project_template",
+          "git_tag" : "v0.2.2",
+          "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
           "viash_version" : "0.8.4",
-          "config" : "/Users/toni/code/projects/viash/viash_project_template/src/template/combine_columns/config.vsh.yaml",
+          "config" : "/Users/dorienroosen/code/viash_project_template/src/template/combine_columns/config.vsh.yaml",
           "functionalityNamespace" : "template",
           "output" : "",
           "platform" : "",
-          "git_commit" : "11b6278597bf22afbfb56a8e83065a55553c9dd0",
+          "git_commit" : "82b49c3c35b4fd813b4c585e921a5b0885b25cc3",
           "executable" : "/nextflow/template/combine_columns/main.nf"
         },
-        "writtenPath" : "/Users/toni/code/projects/viash/viash_project_template/target/nextflow/template/combine_columns"
+        "writtenPath" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/combine_columns"
       },
       {
         "name" : "template/remove_comments",
@@ -2862,20 +2862,20 @@ meta = [
           "type" : "local",
           "localPath" : ""
         },
-        "foundConfigPath" : "/Users/toni/code/projects/viash/viash_project_template/src/template/remove_comments/config.vsh.yaml",
+        "foundConfigPath" : "/Users/dorienroosen/code/viash_project_template/src/template/remove_comments/config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "remove_comments",
-          "git_tag" : "v0.2.1",
-          "git_remote" : "https://github.com/viash-io/viash_project_template",
+          "git_tag" : "v0.2.2",
+          "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
           "viash_version" : "0.8.4",
-          "config" : "/Users/toni/code/projects/viash/viash_project_template/src/template/remove_comments/config.vsh.yaml",
+          "config" : "/Users/dorienroosen/code/viash_project_template/src/template/remove_comments/config.vsh.yaml",
           "functionalityNamespace" : "template",
           "output" : "",
           "platform" : "",
-          "git_commit" : "11b6278597bf22afbfb56a8e83065a55553c9dd0",
+          "git_commit" : "82b49c3c35b4fd813b4c585e921a5b0885b25cc3",
           "executable" : "/nextflow/template/remove_comments/main.nf"
         },
-        "writtenPath" : "/Users/toni/code/projects/viash/viash_project_template/target/nextflow/template/remove_comments"
+        "writtenPath" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/remove_comments"
       },
       {
         "name" : "template/take_column",
@@ -2883,20 +2883,20 @@ meta = [
           "type" : "local",
           "localPath" : ""
         },
-        "foundConfigPath" : "/Users/toni/code/projects/viash/viash_project_template/src/template/take_column/config.vsh.yaml",
+        "foundConfigPath" : "/Users/dorienroosen/code/viash_project_template/src/template/take_column/config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "take_column",
-          "git_tag" : "v0.2.1",
-          "git_remote" : "https://github.com/viash-io/viash_project_template",
+          "git_tag" : "v0.2.2",
+          "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
           "viash_version" : "0.8.4",
-          "config" : "/Users/toni/code/projects/viash/viash_project_template/src/template/take_column/config.vsh.yaml",
+          "config" : "/Users/dorienroosen/code/viash_project_template/src/template/take_column/config.vsh.yaml",
           "functionalityNamespace" : "template",
           "output" : "",
           "platform" : "",
-          "git_commit" : "11b6278597bf22afbfb56a8e83065a55553c9dd0",
+          "git_commit" : "82b49c3c35b4fd813b4c585e921a5b0885b25cc3",
           "executable" : "/nextflow/template/take_column/main.nf"
         },
-        "writtenPath" : "/Users/toni/code/projects/viash/viash_project_template/target/nextflow/template/take_column"
+        "writtenPath" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/take_column"
       },
       {
         "name" : "join/vsh_toList",
@@ -2905,9 +2905,9 @@ meta = [
           "name" : "",
           "repo" : "data-intuitive/vsh-pipeline-operators",
           "tag" : "v0.2.0",
-          "localPath" : "/tmp/viash_hub_repo2163324410061546398"
+          "localPath" : "/tmp/viash_hub_repo9524011893996370194"
         },
-        "foundConfigPath" : "/tmp/viash_hub_repo2163324410061546398/target/nextflow/join/vsh_toList/.config.vsh.yaml",
+        "foundConfigPath" : "/tmp/viash_hub_repo9524011893996370194/target/nextflow/join/vsh_toList/.config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "vsh_toList",
           "git_remote" : "git@viash-hub.com:data-intuitive/vsh-pipeline-operators.git",
@@ -2919,7 +2919,7 @@ meta = [
           "git_commit" : "05a5bfa4eaa2c04ba473671e4d30c6c18aceec6e",
           "executable" : "/Users/toni/code/projects/viash-hub/vsh-pipeline-operators/target/nextflow/join/vsh_toList/main.nf"
         },
-        "writtenPath" : "/Users/toni/code/projects/viash/viash_project_template/target/dependencies/vsh/data-intuitive/vsh-pipeline-operators/v0.2.0/nextflow/join/vsh_toList"
+        "writtenPath" : "/Users/dorienroosen/code/viash_project_template/target/dependencies/vsh/data-intuitive/vsh-pipeline-operators/v0.2.0/nextflow/join/vsh_toList"
       }
     ],
     "repositories" : [
@@ -2943,6 +2943,9 @@ meta = [
       "type" : "nextflow",
       "id" : "nextflow",
       "directives" : {
+        "label" : [
+          "gpu"
+        ],
         "tag" : "$id"
       },
       "auto" : {
@@ -2990,13 +2993,13 @@ meta = [
     }
   ],
   "info" : {
-    "config" : "/Users/toni/code/projects/viash/viash_project_template/src/template/workflow/config.vsh.yaml",
+    "config" : "/Users/dorienroosen/code/viash_project_template/src/template/workflow/config.vsh.yaml",
     "platform" : "nextflow",
-    "output" : "/Users/toni/code/projects/viash/viash_project_template/target/nextflow/template/workflow",
+    "output" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/workflow",
     "viash_version" : "0.8.4",
-    "git_commit" : "11b6278597bf22afbfb56a8e83065a55553c9dd0",
-    "git_remote" : "https://github.com/viash-io/viash_project_template",
-    "git_tag" : "v0.2.1"
+    "git_commit" : "82b49c3c35b4fd813b4c585e921a5b0885b25cc3",
+    "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
+    "git_tag" : "v0.2.2"
   }
 }'''))
 ]
@@ -3079,6 +3082,9 @@ meta["defaults"] = [
 
   // default directives
   directives: readJsonBlob('''{
+  "label" : [
+    "gpu"
+  ],
   "tag" : "$id"
 }'''),
 
