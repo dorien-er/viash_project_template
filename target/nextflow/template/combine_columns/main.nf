@@ -2830,10 +2830,6 @@ meta = [
       "type" : "nextflow",
       "id" : "nextflow",
       "directives" : {
-        "containerOptions" : [
-          "--gpus all"
-        ],
-        "executor" : "google-batch",
         "machineType" : "a2-ultragpu-1g",
         "tag" : "$id"
       },
@@ -2886,9 +2882,9 @@ meta = [
     "platform" : "nextflow",
     "output" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/combine_columns",
     "viash_version" : "0.8.4",
-    "git_commit" : "d135cfcf0fc19f5b58879eed3c142c2f03c00007",
+    "git_commit" : "2bb845dba118b5aa47847f7c4e31749f7a18a9d7",
     "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
-    "git_tag" : "v0.2.2-2-gd135cfc"
+    "git_tag" : "v0.2.2-3-g2bb845d"
   }
 }'''))
 ]
@@ -3295,10 +3291,6 @@ meta["defaults"] = [
     "image" : "viash-io/viash_project_template/template/combine_columns",
     "tag" : "0.2.2"
   },
-  "containerOptions" : [
-    "--gpus all"
-  ],
-  "executor" : "google-batch",
   "machineType" : "a2-ultragpu-1g",
   "tag" : "$id"
 }'''),

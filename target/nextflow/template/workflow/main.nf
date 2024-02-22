@@ -2844,14 +2844,14 @@ meta = [
         "foundConfigPath" : "/Users/dorienroosen/code/viash_project_template/src/template/combine_columns/config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "combine_columns",
-          "git_tag" : "v0.2.2-2-gd135cfc",
+          "git_tag" : "v0.2.2-3-g2bb845d",
           "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
           "viash_version" : "0.8.4",
           "config" : "/Users/dorienroosen/code/viash_project_template/src/template/combine_columns/config.vsh.yaml",
           "functionalityNamespace" : "template",
           "output" : "",
           "platform" : "",
-          "git_commit" : "d135cfcf0fc19f5b58879eed3c142c2f03c00007",
+          "git_commit" : "2bb845dba118b5aa47847f7c4e31749f7a18a9d7",
           "executable" : "/nextflow/template/combine_columns/main.nf"
         },
         "writtenPath" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/combine_columns"
@@ -2865,14 +2865,14 @@ meta = [
         "foundConfigPath" : "/Users/dorienroosen/code/viash_project_template/src/template/remove_comments/config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "remove_comments",
-          "git_tag" : "v0.2.2-2-gd135cfc",
+          "git_tag" : "v0.2.2-3-g2bb845d",
           "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
           "viash_version" : "0.8.4",
           "config" : "/Users/dorienroosen/code/viash_project_template/src/template/remove_comments/config.vsh.yaml",
           "functionalityNamespace" : "template",
           "output" : "",
           "platform" : "",
-          "git_commit" : "d135cfcf0fc19f5b58879eed3c142c2f03c00007",
+          "git_commit" : "2bb845dba118b5aa47847f7c4e31749f7a18a9d7",
           "executable" : "/nextflow/template/remove_comments/main.nf"
         },
         "writtenPath" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/remove_comments"
@@ -2886,14 +2886,14 @@ meta = [
         "foundConfigPath" : "/Users/dorienroosen/code/viash_project_template/src/template/take_column/config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "take_column",
-          "git_tag" : "v0.2.2-2-gd135cfc",
+          "git_tag" : "v0.2.2-3-g2bb845d",
           "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
           "viash_version" : "0.8.4",
           "config" : "/Users/dorienroosen/code/viash_project_template/src/template/take_column/config.vsh.yaml",
           "functionalityNamespace" : "template",
           "output" : "",
           "platform" : "",
-          "git_commit" : "d135cfcf0fc19f5b58879eed3c142c2f03c00007",
+          "git_commit" : "2bb845dba118b5aa47847f7c4e31749f7a18a9d7",
           "executable" : "/nextflow/template/take_column/main.nf"
         },
         "writtenPath" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/take_column"
@@ -2905,9 +2905,9 @@ meta = [
           "name" : "",
           "repo" : "data-intuitive/vsh-pipeline-operators",
           "tag" : "v0.2.0",
-          "localPath" : "/tmp/viash_hub_repo708811995084202924"
+          "localPath" : "/tmp/viash_hub_repo16581359879523664483"
         },
-        "foundConfigPath" : "/tmp/viash_hub_repo708811995084202924/target/nextflow/join/vsh_toList/.config.vsh.yaml",
+        "foundConfigPath" : "/tmp/viash_hub_repo16581359879523664483/target/nextflow/join/vsh_toList/.config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "vsh_toList",
           "git_remote" : "git@viash-hub.com:data-intuitive/vsh-pipeline-operators.git",
@@ -2943,10 +2943,6 @@ meta = [
       "type" : "nextflow",
       "id" : "nextflow",
       "directives" : {
-        "containerOptions" : [
-          "--gpus all"
-        ],
-        "executor" : "google-batch",
         "machineType" : "a2-ultragpu-1g",
         "tag" : "$id"
       },
@@ -2999,9 +2995,9 @@ meta = [
     "platform" : "nextflow",
     "output" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/workflow",
     "viash_version" : "0.8.4",
-    "git_commit" : "d135cfcf0fc19f5b58879eed3c142c2f03c00007",
+    "git_commit" : "2bb845dba118b5aa47847f7c4e31749f7a18a9d7",
     "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
-    "git_tag" : "v0.2.2-2-gd135cfc"
+    "git_tag" : "v0.2.2-3-g2bb845d"
   }
 }'''))
 ]
@@ -3084,10 +3080,6 @@ meta["defaults"] = [
 
   // default directives
   directives: readJsonBlob('''{
-  "containerOptions" : [
-    "--gpus all"
-  ],
-  "executor" : "google-batch",
   "machineType" : "a2-ultragpu-1g",
   "tag" : "$id"
 }'''),
