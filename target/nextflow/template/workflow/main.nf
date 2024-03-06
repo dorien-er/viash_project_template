@@ -2844,14 +2844,14 @@ meta = [
         "foundConfigPath" : "/Users/dorienroosen/code/viash_project_template/src/template/combine_columns/config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "combine_columns",
-          "git_tag" : "v0.2.2-7-g63dc92d",
+          "git_tag" : "v0.2.2-8-g19966c3",
           "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
           "viash_version" : "0.8.4",
           "config" : "/Users/dorienroosen/code/viash_project_template/src/template/combine_columns/config.vsh.yaml",
           "functionalityNamespace" : "template",
           "output" : "",
           "platform" : "",
-          "git_commit" : "63dc92d0f630b777c7d36c0b7d38f0572e4e6d77",
+          "git_commit" : "19966c3d98856d0a71f2e30a250188ca100c9e7a",
           "executable" : "/nextflow/template/combine_columns/main.nf"
         },
         "writtenPath" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/combine_columns"
@@ -2865,14 +2865,14 @@ meta = [
         "foundConfigPath" : "/Users/dorienroosen/code/viash_project_template/src/template/remove_comments/config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "remove_comments",
-          "git_tag" : "v0.2.2-7-g63dc92d",
+          "git_tag" : "v0.2.2-8-g19966c3",
           "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
           "viash_version" : "0.8.4",
           "config" : "/Users/dorienroosen/code/viash_project_template/src/template/remove_comments/config.vsh.yaml",
           "functionalityNamespace" : "template",
           "output" : "",
           "platform" : "",
-          "git_commit" : "63dc92d0f630b777c7d36c0b7d38f0572e4e6d77",
+          "git_commit" : "19966c3d98856d0a71f2e30a250188ca100c9e7a",
           "executable" : "/nextflow/template/remove_comments/main.nf"
         },
         "writtenPath" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/remove_comments"
@@ -2886,14 +2886,14 @@ meta = [
         "foundConfigPath" : "/Users/dorienroosen/code/viash_project_template/src/template/take_column/config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "take_column",
-          "git_tag" : "v0.2.2-7-g63dc92d",
+          "git_tag" : "v0.2.2-8-g19966c3",
           "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
           "viash_version" : "0.8.4",
           "config" : "/Users/dorienroosen/code/viash_project_template/src/template/take_column/config.vsh.yaml",
           "functionalityNamespace" : "template",
           "output" : "",
           "platform" : "",
-          "git_commit" : "63dc92d0f630b777c7d36c0b7d38f0572e4e6d77",
+          "git_commit" : "19966c3d98856d0a71f2e30a250188ca100c9e7a",
           "executable" : "/nextflow/template/take_column/main.nf"
         },
         "writtenPath" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/take_column"
@@ -2905,9 +2905,9 @@ meta = [
           "name" : "",
           "repo" : "data-intuitive/vsh-pipeline-operators",
           "tag" : "v0.2.0",
-          "localPath" : "/tmp/viash_hub_repo12946318126603845705"
+          "localPath" : "/tmp/viash_hub_repo1317527024034076477"
         },
-        "foundConfigPath" : "/tmp/viash_hub_repo12946318126603845705/target/nextflow/join/vsh_toList/.config.vsh.yaml",
+        "foundConfigPath" : "/tmp/viash_hub_repo1317527024034076477/target/nextflow/join/vsh_toList/.config.vsh.yaml",
         "configInfo" : {
           "functionalityName" : "vsh_toList",
           "git_remote" : "git@viash-hub.com:data-intuitive/vsh-pipeline-operators.git",
@@ -2997,9 +2997,9 @@ meta = [
     "platform" : "nextflow",
     "output" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/workflow",
     "viash_version" : "0.8.4",
-    "git_commit" : "63dc92d0f630b777c7d36c0b7d38f0572e4e6d77",
+    "git_commit" : "19966c3d98856d0a71f2e30a250188ca100c9e7a",
     "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
-    "git_tag" : "v0.2.2-7-g63dc92d"
+    "git_tag" : "v0.2.2-8-g19966c3"
   }
 }'''))
 ]

@@ -2838,7 +2838,16 @@ meta = [
       "resolve_volume" : "Automatic",
       "chown" : true,
       "setup_strategy" : "ifneedbepullelsecachedbuild",
-      "target_image_source" : "https://github.com/viash-io/viash_project_template"
+      "target_image_source" : "https://github.com/viash-io/viash_project_template",
+      "setup" : [
+        {
+          "type" : "apt",
+          "packages" : [
+            "nvidia-cuda-toolkit"
+          ],
+          "interactive" : false
+        }
+      ]
     },
     {
       "type" : "nextflow",
@@ -2898,9 +2907,9 @@ meta = [
     "platform" : "nextflow",
     "output" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/remove_comments",
     "viash_version" : "0.8.4",
-    "git_commit" : "63dc92d0f630b777c7d36c0b7d38f0572e4e6d77",
+    "git_commit" : "19966c3d98856d0a71f2e30a250188ca100c9e7a",
     "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
-    "git_tag" : "v0.2.2-7-g63dc92d"
+    "git_tag" : "v0.2.2-8-g19966c3"
   }
 }'''))
 ]
