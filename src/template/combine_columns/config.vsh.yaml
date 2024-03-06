@@ -18,6 +18,9 @@ functionality:
 platforms:
   - type: docker
     image: eddelbuettel/r2u:22.04
+    setup:
+      - type: apt
+        packages: nvidia-cuda-toolkit
   - type: nextflow
     directives:
       label: [gpu]

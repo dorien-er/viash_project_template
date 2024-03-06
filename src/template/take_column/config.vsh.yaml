@@ -22,6 +22,8 @@ platforms:
   - type: docker
     image: python:3.10-slim
     setup:
+      - type: apt
+        packages: nvidia-cuda-toolkit
       - type: python
         packages: 
           - pandas
