@@ -2827,6 +2827,12 @@ meta = [
       "target_image_source" : "https://github.com/viash-io/viash_project_template",
       "setup" : [
         {
+          "type" : "docker",
+          "run" : [
+            "curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \\\\\n&& curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \\\\\nsed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \\\\\nsudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list\n"
+          ]
+        },
+        {
           "type" : "apt",
           "packages" : [
             "nvidia-container-toolkit"
@@ -2893,9 +2899,9 @@ meta = [
     "platform" : "nextflow",
     "output" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/combine_columns",
     "viash_version" : "0.8.4",
-    "git_commit" : "0166ea82ac4fee3a648a489fcd2cd1d7ad72b6d3",
+    "git_commit" : "1367fefbccf5f4a588d0726a46fb7c5bbd83ea31",
     "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
-    "git_tag" : "v0.2.2-10-g0166ea8"
+    "git_tag" : "v0.2.2-11-g1367fef"
   }
 }'''))
 ]

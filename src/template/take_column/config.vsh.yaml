@@ -22,14 +22,19 @@ platforms:
   - type: docker
     image: python:3.10-slim
     setup:
-      - type: apt
-        packages: nvidia-container-toolkit
+      - type: docker
+        run: |
+          curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+          && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+          sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+          sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
       - type: python
         packages: 
           - pandas
       - type: apt
         packages: 
           - procps
+          - nvidia-container-toolkit
   - type: nextflow
     directives:
       label: [gpu]
