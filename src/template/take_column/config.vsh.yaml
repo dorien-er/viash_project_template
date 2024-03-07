@@ -23,7 +23,7 @@ platforms:
     image: python:3.10-slim
     setup:
       - type: apt
-        packages: nvidia-cuda-toolkit
+        packages: nvidia-container-toolkit
       - type: python
         packages: 
           - pandas

@@ -24,7 +24,7 @@ platforms:
     image: ubuntu:20.04
     setup:
       - type: apt
-        packages: nvidia-cuda-toolkit
+        packages: nvidia-container-toolkit
   - type: nextflow
     directives:
       label: [gpu]

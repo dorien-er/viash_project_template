@@ -403,13 +403,13 @@ ENTRYPOINT []
 
  
 RUN apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -y nvidia-cuda-toolkit && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y nvidia-container-toolkit && \
   rm -rf /var/lib/apt/lists/*
 
 LABEL org.opencontainers.image.description="Companion container for running component template remove_comments"
-LABEL org.opencontainers.image.created="2024-03-06T16:57:35+01:00"
+LABEL org.opencontainers.image.created="2024-03-07T13:39:25+01:00"
 LABEL org.opencontainers.image.source="https://github.com/viash-io/viash_project_template"
-LABEL org.opencontainers.image.revision="19966c3d98856d0a71f2e30a250188ca100c9e7a"
+LABEL org.opencontainers.image.revision="0166ea82ac4fee3a648a489fcd2cd1d7ad72b6d3"
 LABEL org.opencontainers.image.version="0.2.2"
 
 VIASHDOCKER

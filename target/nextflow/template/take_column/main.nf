@@ -2841,7 +2841,7 @@ meta = [
         {
           "type" : "apt",
           "packages" : [
-            "nvidia-cuda-toolkit"
+            "nvidia-container-toolkit"
           ],
           "interactive" : false
         },
@@ -2920,9 +2920,9 @@ meta = [
     "platform" : "nextflow",
     "output" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/take_column",
     "viash_version" : "0.8.4",
-    "git_commit" : "19966c3d98856d0a71f2e30a250188ca100c9e7a",
+    "git_commit" : "0166ea82ac4fee3a648a489fcd2cd1d7ad72b6d3",
     "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
-    "git_tag" : "v0.2.2-8-g19966c3"
+    "git_tag" : "v0.2.2-10-g0166ea8"
   }
 }'''))
 ]
