@@ -395,24 +395,19 @@ function ViashDockerCheckCommands {
 #   ViashDockerFile
 function ViashDockerfile {
   cat << 'VIASHDOCKER'
-FROM eddelbuettel/r2u:22.04
+FROM nvcr.io/nvidia/pytorch:23.09-py3
 
 ENTRYPOINT []
 
  
-RUN curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
-&& curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
-sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
-sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
-
 RUN apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -y nvidia-container-toolkit && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y r-base && \
   rm -rf /var/lib/apt/lists/*
 
 LABEL org.opencontainers.image.description="Companion container for running component template combine_columns"
-LABEL org.opencontainers.image.created="2024-03-07T13:48:54+01:00"
+LABEL org.opencontainers.image.created="2024-03-13T14:58:05+01:00"
 LABEL org.opencontainers.image.source="https://github.com/viash-io/viash_project_template"
-LABEL org.opencontainers.image.revision="1367fefbccf5f4a588d0726a46fb7c5bbd83ea31"
+LABEL org.opencontainers.image.revision="e94356324544d3286826758e6575297e8153c3d6"
 LABEL org.opencontainers.image.version="0.2.2"
 
 VIASHDOCKER

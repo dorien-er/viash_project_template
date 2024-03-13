@@ -2829,7 +2829,7 @@ meta = [
     {
       "type" : "docker",
       "id" : "docker",
-      "image" : "python:3.10-slim",
+      "image" : "nvcr.io/nvidia/pytorch:23.09-py3",
       "target_organization" : "viash-io/viash_project_template",
       "target_registry" : "ghcr.io",
       "namespace_separator" : "/",
@@ -2838,12 +2838,6 @@ meta = [
       "setup_strategy" : "ifneedbepullelsecachedbuild",
       "target_image_source" : "https://github.com/viash-io/viash_project_template",
       "setup" : [
-        {
-          "type" : "docker",
-          "run" : [
-            "curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \\\\\n&& curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \\\\\nsed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \\\\\nsudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list\n"
-          ]
-        },
         {
           "type" : "python",
           "user" : false,
@@ -2855,8 +2849,7 @@ meta = [
         {
           "type" : "apt",
           "packages" : [
-            "procps",
-            "nvidia-container-toolkit"
+            "procps"
           ],
           "interactive" : false
         }
@@ -2920,9 +2913,9 @@ meta = [
     "platform" : "nextflow",
     "output" : "/Users/dorienroosen/code/viash_project_template/target/nextflow/template/take_column",
     "viash_version" : "0.8.4",
-    "git_commit" : "1367fefbccf5f4a588d0726a46fb7c5bbd83ea31",
+    "git_commit" : "e94356324544d3286826758e6575297e8153c3d6",
     "git_remote" : "git@github.com:dorien-er/viash_project_template.git",
-    "git_tag" : "v0.2.2-11-g1367fef"
+    "git_tag" : "v0.2.2-12-ge943563"
   }
 }'''))
 ]
